@@ -63,7 +63,9 @@
         {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
         {% for relation in item.related_episodes %}
           {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
-          <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
+          <a href="{{ url(relation) }}">{{ relation.name }}</a>
+          {{relation.soundcloud_url.html|safe}}
+          {% if not loop.last %},{% endif %}
         {% endfor %}
       </li>
   </ul>
