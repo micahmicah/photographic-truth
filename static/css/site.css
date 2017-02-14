@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-h1, p, ul li,
+h1, h2, p, ul li,
 ol li {
   font-family: "itc franklin gothic std", arial narrow, arial, sans-serif;
 }
@@ -19,10 +19,6 @@ body {
   h1 {
     font-size: 72px;
   }
-}
-
-h2 {
-  color: blue;
 }
 
 a:visited {
