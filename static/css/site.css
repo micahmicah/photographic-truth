@@ -21,6 +21,10 @@ body {
   }
 }
 
+h2 {
+  color: blue;
+}
+
 a:visited {
   color: black;
 }
