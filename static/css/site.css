@@ -28,4 +28,37 @@ a:hover {
   color: red;
 }
 
+body {
+  max-width: 100%;
+  background: black;
+}
+
+p {
+  color: white;
+}
+
+.logo-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.logo-container svg {
+  max-width: 100vw;
+}
+@media screen and (min-width: 513px) {
+  .logo-container svg {
+    max-width: 60vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .logo-container svg {
+    max-width: 50vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .logo-container svg {
+    max-width: 40vw;
+  }
+}
+
 /*# sourceMappingURL=site.css.map */

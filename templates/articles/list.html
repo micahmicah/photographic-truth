@@ -5,9 +5,10 @@
 {% extends "templates/partials/base.html" %}
 
 {# This sets our page <title>. It will append entries to the site title defined in base.html #}
-{% block title %}Entries | {% parent %}{% endblock %}
+{% block title %}Articles | {% parent %}{% endblock %}
 
 {% block content %}
+
 
   {# The first thing we do is call entries data from the CMS. #}
   {% set data = cms.entries %}

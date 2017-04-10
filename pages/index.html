@@ -7,8 +7,11 @@
 
 {% block content %}
 
-  <h1>Photographic Truth</h1>
-
+  {# <h1>Photographic Truth</h1> #}
+  <section class="logo-container">
+  {% include "templates/partials/icons/logo-type.html" %}
+  <p>A platform for discussions about photographs in the media: what they tell us, how they mean, and who we are. </p>
+  </section>
 {#   <p>This is your homepage, located at /pages/index.html.</p>
 
   <p><a href="/cms/">Looking for the CMS?</a></p> #}
@@ -27,3 +30,5 @@
   {% endif %} #}
 
 {% endblock %}
+
+
