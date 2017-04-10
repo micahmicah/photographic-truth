@@ -1,8 +1,18 @@
+@font-face{
+	font-family:"franklin-gothic-compressed";
+	font-weight:700;
+	src: url('../fonts/ITCFranklinGothicStd-DmCp.otf');
+}
+
 %serif{
-	
+	font-family:georgia, times, serif;	
 }
 
 %sans-serif{
 	font-family:"itc franklin gothic std", arial narrow, arial, sans-serif;
 	
+}
+
+%sans-compressed{
+	font-family:"franklin-gothic-compressed";
 }

@@ -1,0 +1,16 @@
+article{
+
+}
+
+.article__subtitle{
+	p{
+		color:black;	
+	}
+}
+
+.article__container{
+	p{
+		@extend %serif;;
+		color:black;
+	}
+}

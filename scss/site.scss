@@ -9,14 +9,21 @@
 @import "dependencies/base";
 
 // Components
+@import "components/main-nav";
+@import "components/article";
+
 
 body{
 	max-width:100%;
-	background:black;
+	background:white;
 }
 
 p{
 	color:white;
+}
+
+h1{
+	@extend %sans-compressed;
 }
 
 .logo-container{

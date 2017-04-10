@@ -6,13 +6,28 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "franklin-gothic-compressed";
+  font-weight: 700;
+  src: url("../fonts/ITCFranklinGothicStd-DmCp.otf");
+}
+.article__container p {
+  font-family: georgia, times, serif;
+}
+
 h1, h2, p, ul li,
 ol li {
   font-family: "itc franklin gothic std", arial narrow, arial, sans-serif;
 }
 
+.main-nav__list-item, h1 {
+  font-family: "franklin-gothic-compressed";
+}
+
 body {
   background: whitesmoke;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 769px) {
@@ -28,9 +43,60 @@ a:hover {
   color: red;
 }
 
+.main-nav {
+  background: white;
+}
+@media screen and (min-width: 513px) {
+  .main-nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100vw);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.88, -0.01, 0.58, 1);
+    -moz-transition-timing-function: cubic-bezier(0.88, -0.01, 0.58, 1);
+    transition-timing-function: cubic-bezier(0.88, -0.01, 0.58, 1);
+  }
+  .main-nav.active {
+    transform: translateX(0vw);
+  }
+}
+
+.main-nav__list {
+  margin-top: 0;
+}
+
+.main-nav__list-item {
+  font-size: 72px;
+}
+
+.main-nav__toggle {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  background: white;
+}
+@media screen and (min-width: 513px) {
+  .main-nav__toggle {
+    top: 0;
+    right: 0;
+  }
+}
+
+.article__subtitle p {
+  color: black;
+}
+
+.article__container p {
+  color: black;
+}
+
 body {
   max-width: 100%;
-  background: black;
+  background: white;
 }
 
 p {
