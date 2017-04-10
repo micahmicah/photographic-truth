@@ -1,0 +1,39 @@
+.main-nav{
+	background:white;
+	@include respond-above(small){
+		width:100vw;
+		height:100vh;
+		position:fixed;
+		top:0;
+		transform:translateX(-100vw);
+		@include transition(all 0.5s);
+		@include transition-timing-function(cubic-bezier(0.88,-0.01, 0.58, 1));
+
+		&.active{
+			transform:translateX(-0vw);
+		}
+	}	
+}
+
+
+.main-nav__list{
+	margin-top:0;
+}
+
+.main-nav__list-item{
+	@extend %sans-compressed;
+	font-size:72px;
+}
+
+
+
+.main-nav__toggle{
+	position:fixed;
+	z-index:2;
+	bottom:0;
+	background:white;
+	@include respond-above(small){
+		top:0;
+		right:0;
+	}
+}
