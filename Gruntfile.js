@@ -2,8 +2,11 @@
     'use strict';
 })();
 
+
 module.exports = function(grunt) {
 
+var neat = require('node-neat');
+var bourbon = require('node-bourbon');
     // ----------------------------------------------------------
     // WARNING, BRAVE DEVELOPER
     // ----------------------------------------------------------
@@ -31,14 +34,13 @@ module.exports = function(grunt) {
             }
         },
 
-
         // Build scss to css
         sass: {
             dev: {
                 options: {
                     // WebHook will minifiy, so we don't have to here
                     style: 'expanded',
-                    loadPath: require('node-bourbon').includePaths,
+                    loadPath: require('node-neat').includePaths,
                     loadPath: require('node-neat').includePaths
                 },
                 files: [{
@@ -57,12 +59,11 @@ module.exports = function(grunt) {
                 }]
             }
         }
-
-
     });
 
   
     grunt.loadNpmTasks('grunt-contrib-sass');
+
 
     // NEVER REMOVE THESE LINES, OR ELSE YOUR PROJECT MAY NOT WORK
     require('./options/generatorOptions.js')(grunt);

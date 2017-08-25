@@ -5,21 +5,10 @@
 {% block content %}
  <h1 class="article__title">{{item.name}}</h1>
  <h2 class="article__subtitle">{{item.subtitle|safe}}</h2>
-{% for row in item.story %}
+
   <section class="article__container">
-    <h3>{{row.section_title}}</h3>
-    {% if row.image %}
-      <img src="{{row.image|imageSize(600)}}" alt="">
-      {% if row.image_caption%}
-        <figcaption>
-          {{row.image_caption|safe}}
-        </figcaption>
-      {% endif %}
-    {% endif %}
-    <section>
-      {{row.section_text|safe}}
-    </section>
+    {{item.story|safe}}
   </section>
-{% endfor %}
+
 
 {% endblock %}

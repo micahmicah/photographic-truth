@@ -5,9 +5,10 @@
 		height:100vh;
 		position:fixed;
 		top:0;
+		z-index:10;
 		transform:translateX(-100vw);
-		@include transition(all 0.5s);
-		@include transition-timing-function(cubic-bezier(0.88,-0.01, 0.58, 1));
+		transition: all 0.5s;
+		transition-timing-function:cubic-bezier(0.88,-0.01, 0.58, 1);
 
 		&.active{
 			transform:translateX(-0vw);
@@ -16,8 +17,10 @@
 }
 
 
+
 .main-nav__list{
 	margin-top:0;
+	@include outer-container(90%);
 }
 
 .main-nav__list-item{
@@ -26,14 +29,25 @@
 }
 
 
-
 .main-nav__toggle{
 	position:fixed;
-	z-index:2;
+	z-index:20;
 	bottom:0;
 	background:white;
 	@include respond-above(small){
 		top:0;
 		right:0;
+	}
+	path{
+		transition:all 0.2s;
+	}
+	&.active{
+		#line-01,
+		#line-02{
+			transform:rotate(45deg);
+		}
+		#line-03{
+			transform:rotate(-45deg);
+		}
 	}
 }

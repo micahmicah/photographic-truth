@@ -2,6 +2,7 @@
 @import "bourbon";
 @import "neat";
 
+
 // Dependencies
 @import "dependencies/responsive";
 @import "dependencies/color";
@@ -14,9 +15,26 @@
 
 
 body{
-	max-width:100%;
-	background:white;
+	@include respond-above(small){
+		background:#FFFCDC;
+	}
+
+
+
+	@include respond-above(medium){
+		background:#DCF3FF;
+
+	};
+
+	@include respond-above(large){
+		background:#DCFFF1;
+	};
+
+	@include respond-above(huge){
+		background:#ECDCFF;
+	};
 }
+
 
 p{
 	color:white;

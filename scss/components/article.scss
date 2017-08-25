@@ -1,16 +1,80 @@
-article{
 
+
+.article__title{
+	text-align:center;
+	font-size:100px;
+	text-transform:uppercase;
 }
 
 .article__subtitle{
 	p{
-		color:black;	
+		@extend %serif;
+		color:black;
+		font-weight:normal;
+		font-style:italic;
+		text-align:center;	
 	}
 }
 
 .article__container{
+	@include outer-container(90%);
 	p{
 		@extend %serif;;
 		color:black;
+		font-size:18px;
+		line-height:28px;
+	}
+
+	figure[data-type="image"]{
+		border:1px solid black;
+
+		&.wy-figure-medium{
+			background:red;
+		}
+
+		&.wy-figure-small{
+			background:blue;
+
+		}
+	}
+
+
+	figure[data-type="quote"]{
+		blockquote{
+			@extend %sans-compressed;
+			font-style:normal;
+			font-size:42px;
+			line-height:0.85;
+			text-transform:uppercase;
+			
+			cite{
+				@extend %serif;
+				font-size:18px;
+				font-weight:normal;
+				text-transform:none;
+
+			}
+		}
+
+		&.wy-figure-large{
+			blockquote{
+				font-size:88px;
+			}
+		}
+
+		&.wy-figure-medium{
+			blockquote{
+
+			}
+		}
+
+		&.wy-figure-small{
+			blockquote{
+
+			}
+			
+			@include column(2);
+		}
 	}
 }
+
