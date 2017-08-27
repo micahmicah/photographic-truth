@@ -9,10 +9,6 @@
 
 {% block content %}
 
-{% for item in cms.articles %}
-  <section>
-    <h1><a href="{{url(item)}}">{{item.name}}</a></h1>
-  </section>
-{% endfor %}
+{% include "templates/partials/article-list.html" %}
 
 {% endblock %}

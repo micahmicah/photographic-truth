@@ -1,0 +1,30 @@
+.footer-nav__container{
+	max-width:90%;
+	margin:0 auto;
+}
+
+.footer-nav__list{
+	padding:0;
+	list-style:none;
+	display:flex;
+}
+
+.footer-nav__item{
+	flex:1;
+	max-width:40px;
+}
+
+.footer-nav__link{
+	svg{
+		max-width:30px;
+	}
+
+	&:hover{
+		background:none;
+		svg{
+			path{
+				fill:$gray;
+			}
+		}
+	}	
+}

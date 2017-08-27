@@ -13,7 +13,8 @@
 .article-list__link{
 	@extend %sans-compressed;
 	@include text-size($large);
-	@include transition(all 0.2s ease-in-out);	
+	@include transition(background 0.2s ease-in-out);	
+	@include transition(color 0.2s ease-in-out);	
 	border-bottom:1px solid black;
 	color:white;
 	display:block;
@@ -32,4 +33,8 @@
 		background:black;
 		color:white;
 	}
+}
+
+p{
+	color:$text-color!important;
 }

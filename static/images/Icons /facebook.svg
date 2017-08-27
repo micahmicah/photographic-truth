@@ -1,0 +1,17 @@
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Social / Facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M23.9058721,5 L6.09424419,5 C5.48383721,5 5,5.48389535 5,6.09430233 L5,23.9059302 C5,24.5161047 5.48383721,25 6.09424419,25 L15.6976744,25 L15.6976744,17.2674419 L13.0813953,17.2674419 L13.0813953,14.244186 L15.6976744,14.244186 L15.6976744,12.0074419 C15.6976744,9.42139535 17.2784884,8.01325581 19.5855233,8.01325581 C20.6905233,8.01325581 21.627907,8.0955814 21.9186047,8.13226744 L21.9186047,10.8348837 L20.2975581,10.8356395 C19.0429651,10.8356395 18.7790698,11.4318023 18.7790698,12.306686 L18.7790698,14.244186 L21.7959884,14.244186 L21.4063372,17.2674419 L18.7790698,17.2674419 L18.7790698,25 L23.9058721,25 C24.5159884,25 25,24.5161047 25,23.9059302 L25,6.09430233 C25,5.48389535 24.5159884,5 23.9058721,5" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Social-/-Facebook" transform="translate(-5.000000, -5.000000)">
+            <rect id="bg" x="0" y="0" width="30" height="30"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Facebook" fill="#000000" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

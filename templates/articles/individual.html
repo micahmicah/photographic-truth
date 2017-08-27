@@ -14,8 +14,8 @@
     	<p class="article-byline">{{relation.name}}</p>
     	<p class="article-byline--details">{{ item.last_updated|date('F d Y') }}</p>
     {% endfor %}
+    {% include "templates/partials/share-module.html" %}
   </section>
-
 {% include "templates/partials/article-list.html" %}
 {% endblock %}
 
