@@ -2,7 +2,7 @@
 
 <nav class="article-list__container">
 	<ul class="article-list__list">
-		{% for item in cms.articles %}
+		{% for item in cms.articles|sort('publish_date',true) %}
 			<li class="article-list__item"><a class="article-list__link" href="{{url(item)}}">{{item.name}}</a></li>
 		{% endfor %}
 	</ul>

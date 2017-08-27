@@ -5,6 +5,8 @@
 
 	.fb_iframe_widget{
 		margin-right:0.5rem;
-		margin-top:-8px;
+		@include respond-above(small){
+			margin-top:-8px;		
+		};
 	}
 }

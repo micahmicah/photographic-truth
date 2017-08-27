@@ -5,13 +5,14 @@
 	top:0;
 	width:100vh;
 	height:100vh;
-	transition: all 0.5s;
+	transition: transform 0.5s;
 	transition-timing-function:cubic-bezier(0.88,-0.01, 0.58, 1);
-	z-index:10;
+	// z-index:-10;
 
 
 	&.active{
 		transform:translatey(0vh);
+		z-index:10;
 	}
 	@include respond-above(small){
 		width:100vw;
@@ -19,7 +20,7 @@
 		position:fixed;
 		top:0;
 		transform:translateX(-100vw);
-		transition: all 0.5s;
+		transition: transform 0.5s;
 		transition-timing-function:cubic-bezier(0.88,-0.01, 0.58, 1);
 
 		&.active{
