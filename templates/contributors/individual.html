@@ -1,17 +1,28 @@
-{# ------------------------------------------------------- #}
-{# INDIVIDUAL VIEW FOR EACH contributors #}
-{# This page can use any data from http:localhost:2000/cms/#/form/contributors/ #}
-{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
-{# http://paularmstrong.github.io/swig/docs/tags/ #}
-{# Learn about calling data into Webhook pages here: #}
-{# http://www.webhook.com/docs/template-rules-and-filters/ #}
-{# ------------------------------------------------------- #}
-{# Confused what extends and blocks do? Watch a primer: #}
-{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+
 {% extends "templates/partials/base.html" %}
 {# This sets our page <title>. It will append this contributors's name to the site title defined in base.html #}
 {% block title %}{% parent %} - {{ item.name }}{% endblock %}
 {% block content %}
+
+
+
+<h1>{{item.name}}</h1>
+
+
+
+<nav class="article-list__container">
+  <ul class="article-list__list">
+    {% for article in item.entries_contributor %}
+      <li class="article-list__item"><a class="article-list__link" href="{{url(item)}}">{{article.name}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% for relation in item.entries_contributor %}
+          {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
+          <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
+        {% endfor %}
+
   <p><a href="{{ url('contributors') }}">View a list of all contributors</a></p>
   <h1>{{ item.name }}</h1>
   <ul>

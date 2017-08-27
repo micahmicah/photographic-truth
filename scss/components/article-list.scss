@@ -1,0 +1,29 @@
+.article-list__container{
+	// background:red;
+}
+
+.article-list__list{
+	padding:0;
+}
+
+.article-list__item{
+	list-style:none;
+}
+
+.article-list__link{
+	@extend %sans-compressed;
+	@include text-size($x-large);
+	@include transition(all 0.2s ease-in-out);	
+	border-bottom:1px solid black;
+	color:white;
+	display:block;
+	padding:0.25em 0.25em 0.01em 0.25em;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+
+	&:hover{
+		background:black;
+		color:white;
+	}
+}

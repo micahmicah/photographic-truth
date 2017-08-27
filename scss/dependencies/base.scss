@@ -48,12 +48,17 @@ ol{
 
 
 a{
+	color:$text-color;
+
 	&:visited{
 		color:$text-color;	
 	}
 
 	&:hover{
-		color:$pop-color;
+		color:$background-color;
+		background:$text-color;
+		text-decoration:none;
+		-webkit-font-smoothing:antialiased;
 	}
 
 }

@@ -4,11 +4,18 @@
 {% block title %}{% parent %} - {{ item.name }}{% endblock %}
 {% block content %}
  <h1 class="article__title">{{item.name}}</h1>
- <h2 class="article__subtitle">{{item.subtitle|safe}}</h2>
+ {% if item.subtitle %}
+	 <h2 class="article__subtitle">{{item.subtitle|safe}}</h2>
+ {% endif %}
 
   <section class="article__container">
     {{item.story|safe}}
+    {% for relation in item.contributor %}
+    	<p class="article-byline">{{relation.name}}</p>
+    	<p class="article-byline--details">{{ item.last_updated|date('F d Y') }}</p>
+    {% endfor %}
   </section>
 
-
+{% include "templates/partials/article-list.html" %}
 {% endblock %}
+

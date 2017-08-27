@@ -12,27 +12,11 @@
 // Components
 @import "components/main-nav";
 @import "components/article";
+@import "components/article-list";
 
 
 body{
-	@include respond-above(small){
-		background:#FFFCDC;
-	}
-
-
-
-	@include respond-above(medium){
-		background:#DCF3FF;
-
-	};
-
-	@include respond-above(large){
-		background:#DCFFF1;
-	};
-
-	@include respond-above(huge){
-		background:#ECDCFF;
-	};
+	background:$background-color;
 }
 
 

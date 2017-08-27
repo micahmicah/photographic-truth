@@ -62,7 +62,6 @@ figure[data-type=image].wy-figure-small {
 figure[data-type=quote] {
   font-family: "Georgia", serif;
   margin-bottom: 24px;
-  margin-left: 24px;
   font-style: italic;
   position: relative;
   border-left: solid 5px #404040;
@@ -79,10 +78,9 @@ figure[data-type=quote].wy-figure-large {
   font-size: 24px;
 }
 figure[data-type=quote].wy-figure-right {
-  width: 33%;
+
 }
 figure[data-type=quote].wy-figure-left {
-  width: 33%;
   border-left: none;
   border-right: solid 5px #404040;
   padding-left: 0;
@@ -101,7 +99,7 @@ figure[data-type=quote] cite:before {
 
 .wy-figure-right {
   float: right;
-  margin-left: 24px;
+
 }
 .wy-figure-right .wy-figure-controls {
   right: 0;
@@ -109,13 +107,13 @@ figure[data-type=quote] cite:before {
 
 .wy-figure-left {
   float: left;
-  margin-right: 24px;
+
 }
 
 @media screen and (max-width: 480px) {
   figure[data-type=image] {
-    width: 100% !important;
-    float: none !important;
+
+
     margin-left: 0;
     margin-right: 0;
   }
