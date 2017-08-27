@@ -147,18 +147,44 @@ a:hover {
 
 .main-nav__list {
   margin-top: 0;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.main-nav__list::after {
-  clear: both;
-  content: "";
-  display: table;
+  padding: 1rem 0 0 0;
 }
 
 .main-nav__list-item {
-  font-size: 72px;
+  list-style: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+@media screen and (min-width: 1px) {
+  .main-nav__list-item {
+    font-size: 72px;
+    line-height: calc(58 / 72);
+  }
+}
+@media screen and (min-width: 513px) {
+  .main-nav__list-item {
+    font-size: 72px;
+    line-height: calc(58 / 72);
+  }
+}
+@media screen and (min-width: 769px) {
+  .main-nav__list-item {
+    font-size: 120px;
+    line-height: calc(96 / 120);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-nav__list-item {
+    font-size: 150px;
+    line-height: calc(120 / 150);
+  }
+}
+
+.main-nav__link {
+  transition: all 0.2s ease-in-out;
+  display: block;
+  padding: 0.33em 0.25em 0.1em 0.25em;
+  text-decoration: none;
 }
 
 .main-nav__toggle {
@@ -478,32 +504,37 @@ a:hover {
   color: white;
   display: block;
   padding: 0.25em 0.25em 0.01em 0.25em;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   text-transform: uppercase;
+  padding-left: 5%;
 }
 @media screen and (min-width: 1px) {
   .article-list__link {
-    font-size: 72px;
-    line-height: calc(58 / 72);
+    font-size: 36px;
+    line-height: calc(28.8 / 36);
   }
 }
 @media screen and (min-width: 513px) {
   .article-list__link {
-    font-size: 72px;
-    line-height: calc(58 / 72);
+    font-size: 54px;
+    line-height: calc(43 / 54);
   }
 }
 @media screen and (min-width: 769px) {
   .article-list__link {
-    font-size: 120px;
-    line-height: calc(96 / 120);
+    font-size: 72px;
+    line-height: calc(63 / 72);
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
   .article-list__link {
-    font-size: 150px;
-    line-height: calc(120 / 150);
+    padding-left: 16.5%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .article-list__link {
+    padding-left: 25%;
   }
 }
 .article-list__link:hover {

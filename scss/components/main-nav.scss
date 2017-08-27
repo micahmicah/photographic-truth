@@ -32,12 +32,23 @@
 
 .main-nav__list{
 	margin-top:0;
-	@include outer-container(90%);
+	// @include outer-container(90%);
+	padding:1rem 0 0 0;
 }
 
 .main-nav__list-item{
 	@extend %sans-compressed;
-	font-size:72px;
+	@include text-size($x-large);
+	list-style:none;
+	text-transform:uppercase;
+	border-bottom:1px solid $text-color;
+}
+
+.main-nav__link{
+	transition: all 0.2s ease-in-out;
+	display:block;
+	padding:0.33em 0.25em 0.1em 0.25em;
+	text-decoration:none;
 }
 
 

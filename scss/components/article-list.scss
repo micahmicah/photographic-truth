@@ -12,16 +12,22 @@
 
 .article-list__link{
 	@extend %sans-compressed;
-	@include text-size($x-large);
+	@include text-size($large);
 	@include transition(all 0.2s ease-in-out);	
 	border-bottom:1px solid black;
 	color:white;
 	display:block;
 	padding:0.25em 0.25em 0.01em 0.25em;
-	text-align:center;
+	text-align:left;
 	text-decoration:none;
 	text-transform:uppercase;
-
+	padding-left:5%;
+	@include respond-above(medium){
+		padding-left:16.5%;
+	};
+	@include respond-above(huge){
+		padding-left:25%;
+	};
 	&:hover{
 		background:black;
 		color:white;
