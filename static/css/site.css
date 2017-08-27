@@ -16,12 +16,12 @@ h4, .article__subtitle p, .article__container p, .article__container figure[data
   font-family: "tiempos text", georgia, times, serif;
 }
 
-h1, h2, h3, p, ul li,
-ol li, .article__container .article-byline, .article__container .article-byline--details, .article__container figure[data-type="image"] figcaption, input[type="text"], input[type="submit"] {
+h1, h3, p, ul li,
+ol li, .article__container .article-byline, .article__container .article-byline--details, .article__container figure[data-type="image"] figcaption, input[type="email"], input[type="submit"] {
   font-family: "itc franklin gothic std", arial narrow, arial, sans-serif;
 }
 
-.main-nav__list-item, .article__container figure[data-type="quote"] blockquote, .article-list__link, h1 {
+h2, .main-nav__list-item, .article__container figure[data-type="quote"] blockquote, .article-list__link, h1 {
   font-family: "franklin-gothic-compressed";
 }
 
@@ -103,6 +103,22 @@ body {
   }
 }
 
+h2 {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1px) {
+  h2 {
+    font-size: 24px;
+    line-height: calc(20 / 24);
+  }
+}
+@media screen and (min-width: 769px) {
+  h2 {
+    font-size: 42px;
+    line-height: calc(36 / 42);
+  }
+}
+
 a {
   color: black;
 }
@@ -125,6 +141,7 @@ a:hover {
   height: 100vh;
   transition: transform 0.5s;
   transition-timing-function: cubic-bezier(0.88, -0.01, 0.58, 1);
+  z-index: 10;
 }
 .main-nav.active {
   transform: translatey(0vh);
@@ -143,6 +160,17 @@ a:hover {
   .main-nav.active {
     transform: translateX(0vw);
   }
+}
+
+.main-nav__logo {
+  width: 100%;
+  margin-left: 2%;
+  bottom: 2rem;
+  position: fixed;
+}
+.main-nav__logo svg {
+  max-width: 25%;
+  margin: 0 auto;
 }
 
 .main-nav__list {
@@ -270,6 +298,21 @@ a:hover {
   }
 }
 
+.article__subtitle {
+  text-transform: none;
+}
+@media screen and (min-width: 1px) {
+  .article__subtitle {
+    font-size: 24px;
+    line-height: calc(20 / 24);
+  }
+}
+@media screen and (min-width: 769px) {
+  .article__subtitle {
+    font-size: 42px;
+    line-height: calc(36 / 42);
+  }
+}
 .article__subtitle p {
   color: black;
   font-weight: normal;
@@ -554,6 +597,7 @@ p {
   max-width: 90%;
   margin: 0 auto;
   align-items: center;
+  padding-bottom: 4rem;
 }
 
 .footer-nav__container {
@@ -563,7 +607,7 @@ p {
 }
 
 .footer-text {
-  flex: 2;
+  flex: 4;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -582,17 +626,28 @@ p {
 }
 
 #mc_embed_signup {
-  border: 1px solid black;
   display: flex;
-  flex: 3;
+  flex: 1;
 }
 #mc_embed_signup div {
   flex: 1;
-  display: inline;
+  display: flex;
+  margin-right: 0.5rem;
 }
 
 input:focus {
   outline: none;
+}
+
+input[type="email"] {
+  line-height: 1;
+  flex: 4;
+}
+@media screen and (min-width: 1px) {
+  input[type="email"] {
+    font-size: 13px;
+    line-height: calc(14 / 13);
+  }
 }
 
 input[type="submit"] {
@@ -602,7 +657,13 @@ input[type="submit"] {
   color: #fcfcfc;
   font-weight: bold;
   letter-spacing: 0.04em;
-  padding: 0.25em 0.5em;
+  line-height: 1;
+}
+@media screen and (min-width: 1px) {
+  input[type="submit"] {
+    font-size: 13px;
+    line-height: calc(14 / 13);
+  }
 }
 
 .footer-nav__item {
@@ -700,19 +761,23 @@ input[type="submit"] {
   grid-column-end: span 2;
 }
 
+.contributor-image {
+  max-width: 33%;
+  filter: grayscale(1);
+}
+@media screen and (min-width: 1025px) {
+  .contributor-image {
+    max-width: 33%;
+  }
+}
+
 .contributor-individual {
   margin-bottom: 4rem;
 }
 @media screen and (min-width: 1px) {
   .contributor-individual h3 {
-    font-size: 24px;
-    line-height: calc(20 / 24);
-  }
-}
-@media screen and (min-width: 769px) {
-  .contributor-individual h3 {
-    font-size: 42px;
-    line-height: calc(36 / 42);
+    font-size: 18px;
+    line-height: calc(28 / 18);
   }
 }
 @media screen and (min-width: 1px) {
@@ -736,7 +801,7 @@ p {
   height: 100%;
 }
 .logo-container svg {
-  max-width: 100vw;
+  max-width: 90vw;
 }
 @media screen and (min-width: 513px) {
   .logo-container svg {
@@ -750,7 +815,7 @@ p {
 }
 @media screen and (min-width: 1025px) {
   .logo-container svg {
-    max-width: 40vw;
+    max-width: 50vw;
   }
 }
 

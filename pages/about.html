@@ -23,7 +23,10 @@
     <div class="contributors-container">
       <h2 class="contributors">Contributors</h2>
       {% for item in cms.contributors %}
-        <div class="contributor-individual">      
+        <div class="contributor-individual">
+          {% if item.profile_image%}
+             <img class="contributor-image" src="{{item.profile_image|imageCrop(400)}}" alt="">   
+          {% endif %}      
             <h3>{{item.person.first}} {{item.person.last}}</h3>
             {{item.bio|safe}}
             <a href="{{item.website}}">{{item.person.first}}'s website.</a>

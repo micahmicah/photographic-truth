@@ -15,7 +15,9 @@ h1{
 }
 
 h2{
-	@extend %sans-serif;
+	@extend %sans-compressed;
+	@include text-size($medium);
+	text-transform:uppercase;
 }
 
 h3{

@@ -30,11 +30,21 @@
 	}
 }
 
+.contributor-image{
+	max-width:33%;
+	filter:grayscale(1.0);
+	// border-radius:50%;
+	@include respond-above(large){
+		max-width:33%;
+
+	};
+}
+
 .contributor-individual{
 	margin-bottom:4rem;
 
 	h3{
-		@include text-size($medium);
+		@include text-size($small);
 	}
 	p{
 		@extend %serif;

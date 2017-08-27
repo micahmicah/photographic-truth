@@ -4,6 +4,7 @@
 	max-width:90%;
 	margin:0 auto;
 	align-items:center;
+	padding-bottom:4rem;
 }
 
 .footer-nav__container{
@@ -15,7 +16,7 @@
 
 
 .footer-text{
-	flex:2;
+	flex:4;
 	@include text-size($x-small);
 	text-transform:uppercase;
 	letter-spacing:0.08em;
@@ -31,12 +32,12 @@
 }
 
 #mc_embed_signup{
-	border:1px solid black;
 	display:flex;
-	flex:3;
+	flex:1;
 	div{
 		flex:1;
-		display:inline;
+		display:flex;
+		margin-right:0.5rem;
 	}
 }
 
@@ -44,21 +45,32 @@ input{
 	&:focus{
 		outline:none;
 	}
+	
 }
 
-input[type="text"]{
+input[type="email"]{
 	@extend %sans-serif;
+	@include text-size($x-small);
+	line-height:1;
+	flex:4;
+	// padding:0.5em 0.5em 0.25em 0.5em;
+
+
+	
 }
 
 input[type="submit"]{
 	@extend %sans-serif;
+	@include text-size($x-small);
 	background:$text-color;
 	border:none;
 	border-radius:2px;
 	color:$background-color;
 	font-weight:bold;
 	letter-spacing:0.04em;
-	padding:0.25em 0.5em;
+	// padding:0.5em 1em 0.25em 1em;
+	line-height:1;
+
 	
 }
 
