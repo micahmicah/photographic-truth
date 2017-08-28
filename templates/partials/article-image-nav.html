@@ -1,0 +1,14 @@
+<nav class="image-article__list">
+
+	{% for item in cms.articles|sort('publish_date',true)%}
+
+		<article>
+			<a href="{{url(item)}}">
+				<span class="article-number">{{item.article_number}}</span>
+				<img src="{{item.hero_image|imageSize(800)}}" alt="{{item.name}}">
+				<h2>{{item.name}} </h2>
+			</a>
+		</article>
+
+	{% endfor %}
+</nav>

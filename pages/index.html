@@ -10,14 +10,13 @@
   {# <h1>Photographic Truth</h1> #}
   <section class="logo-container">
   {% include "templates/partials/icons/logo-type.html" %}
-  <p>A platform for discussions about photographs in the media: what they tell us, how they mean, and who we are. </p>
+  
   </section>
-
-  <nav class="article-list">
-    {% for item in cms.articles|sort('publish_date',true) %}
-        <li>{{item.name}}</li>
-    {% endfor %}
-  </nav>
+  
+  {% include "templates/partials/article-image-nav.html" %}
+  
+  {# {% include "templates/partials/article-list.html" %} #}
+ 
 {#   <p>This is your homepage, located at /pages/index.html.</p>
 
   <p><a href="/cms/">Looking for the CMS?</a></p> #}

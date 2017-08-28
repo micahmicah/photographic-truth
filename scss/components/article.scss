@@ -9,7 +9,7 @@
 
 .article__subtitle{
 	text-transform:none;
-	@include text-size($medium);
+	@include text-size($small);
 
 	p{
 		@extend %serif;
@@ -97,6 +97,7 @@
 			letter-spacing:0.08em;
 			margin-top:0.25em;
 			text-align:left;
+
 		}
 		
 		&.wy-figure-large{

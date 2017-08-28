@@ -86,7 +86,7 @@ This definition includes redundant repitition of values, so it can be defined mo
 
 // X-Small
 $x-small:(
-  base:(13px, 14px)
+  base:(13px, 16px)
 )!default;
 
 // Small
@@ -106,7 +106,8 @@ $medium:(
 $large:(
   base:(36px, 28.8px),
   small:(54px, 43px),
-  medium:(72px, 63px)
+  medium:(63px, 54px),
+  large:(72px, 63px)
 )!default;
 
 
