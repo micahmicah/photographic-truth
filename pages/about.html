@@ -12,6 +12,7 @@
 {# This sets our page <title>. It will append this about's name to the site title defined in base.html #}
 {% block title %}{% parent %} - {{ cms.about.name }}{% endblock %}
 {% block content %}
+
   <section class="page-container">
     
     <h1 class="page-title">{{ cms.about.name }}</h1>

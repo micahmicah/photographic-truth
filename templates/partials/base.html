@@ -38,6 +38,34 @@
 
     <link rel="shortcut icon" href="/static/images/favicon.png">
     <link rel="apple-touch-icon" href="/static/images/touch-icon.png">
+    
+    {% if item.hero_image %}
+      {% set facebook_image = item.hero_image|imageSize(1200) %}
+        {% else %}
+      {% set facebook_image = 'https://i.ytimg.com/vi/9MLZFQdpveI/maxresdefault.jpg' %}
+    {% endif %}
+    
+    {% if item.name%}
+        {% set social_title = item.name %}
+      {% else %}
+        {% set social_title = site_title %}
+    {% endif %}
+
+    {% if item.story %}
+      {% set social_description = item.social_description %}
+      {% else %}
+      {% set social_dsecription = site_description %}
+    {% endif %}
+
+
+
+    <meta property="og:url"                content="{{getCurrentUrl()}}" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="{{social_title}} | {{site_title}}" />
+    <meta property="og:description"        content="{{social_description}}" />
+    <meta property="og:image"              content="{{facebook_image}}" />
+    <meta property="og:image:width"        content="816" />
+    <meta property="og:image:height"       content="544" />
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
 
@@ -113,10 +141,12 @@
       {% endblock %}
 
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script src="https://use.typekit.net/zzg0bps.js"></script>
+      <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
       {# Put your JS in here and we'll minify it into one file. No CDN scripts. More info: #}
       {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
-
+      
       <!-- build:js /static/javascript/minified.js -->
       <script src="/static/javascript/main.js">
       </script>
