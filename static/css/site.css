@@ -228,6 +228,7 @@ a:hover {
   width: 100vw;
   height: 50px;
   padding: 1rem;
+  text-align: center;
 }
 .main-nav__toggle:hover {
   background: #fcfcfc;
@@ -548,7 +549,7 @@ a:hover {
   border-bottom: 1px solid black;
   color: white;
   display: block;
-  padding: 0.125em;
+  padding: 0.25em;
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
@@ -579,6 +580,11 @@ a:hover {
     line-height: calc(63 / 72);
   }
 }
+@media screen and (min-width: 513px) {
+  .article-list__link {
+    padding: 0.125em;
+  }
+}
 @media screen and (min-width: 769px) {
   .article-list__link {
     padding-left: 16.5%;
@@ -601,8 +607,8 @@ a:hover {
 .article-list__link .article-number {
   text-align: center;
   position: absolute;
-  right: 12.5%;
-  top: -0.9em;
+  right: 6.25%;
+  top: -0.5em;
 }
 @media screen and (min-width: 513px) {
   .article-list__link .article-number {
