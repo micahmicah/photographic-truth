@@ -74,8 +74,9 @@
 	bottom:0;
 	background:$background-color;
 	width:100vw;
-	height:50px;
+	height:60px;
 	padding:1rem;
+	padding-bottom:2rem;
 	text-align:center;
 	&:hover{
 		background:$background-color;
@@ -86,6 +87,7 @@
 		top:0;
 		right:0;
 		width:80px;
+		height:60px;
 		background:none;
 
 		&:hover{
@@ -94,33 +96,36 @@
 		}
 	}
 	svg{
-		@include transform-origin(50% 50%);
-
+		width:50px;
 	}
+	
 	path{
 		transition:all 0.2s;
 
 	}
-
 	
 	&.active{
 		path{
-			stroke-width:8;
+			stroke-width:6;
 		}
-		#line-01,
+		#line-01{
+			transform-origin:10px 10px;
+			transform:rotate(45deg) translateX(4px) translatey(-4px);
+		}
+	
 		#line-02{
-			transform:rotate(45deg) translateX(5%);
+			transform-origin: 26px 20px; 
+			transform:rotate(-45deg) translatex(-2px) translatey(1px);
+			opacity:0;
+			stroke:yellow;
 		}
 
 		#line-03{
-			transform:rotate(-45deg) translatex(-25%);
-			// stroke:red;
-		}
-		#line-02{
-			// stroke:green;
-			transform:rotate(45deg) translatey(-13%) translatex(7%);
-		@include transform-origin(0% 0%);
+			transform-origin:4px 32px;
+			transform:rotate(-45deg) translateX(0px) translatey(10px);
 
 		}
+		
+		
 	}
 }
