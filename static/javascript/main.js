@@ -5,6 +5,7 @@ $( document ).ready(function() {
     	$('.main-nav').toggleClass('active');
     	$(this).toggleClass('active');
     });
+    $('body').addClass('ready');
 });
 
 module.exports = Lightbox;
