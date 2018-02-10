@@ -850,6 +850,7 @@ input[type="submit"] {
 }
 @media screen and (min-width: 1025px) {
   .image-article__list {
+    margin: 40vh auto 0 auto;
     padding: 0 5%;
   }
 }
@@ -947,6 +948,61 @@ input[type="submit"] {
   }
 }
 
+@media print {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .global-footer {
+    display: none;
+  }
+
+  .article-list__container {
+    display: none;
+  }
+
+  .share-module {
+    display: none;
+  }
+
+  @page {
+    margin: 0.5in;
+  }
+  .article__title {
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .wy-figure-right {
+    width: 33%;
+    float: left;
+  }
+
+  .wy-figure-small {
+    max-width: 33%;
+  }
+
+  blockquote {
+    display: none;
+  }
+
+  figure {
+    margin-bottom: 6pt !important;
+    margin-top: 6pt !important;
+  }
+  figure figcaption {
+    font-size: 8pt;
+    line-height: 1.2;
+  }
+
+  .article-byline {
+    margin-top: 0 !important;
+  }
+}
 body {
   background: #fcfcfc;
 }

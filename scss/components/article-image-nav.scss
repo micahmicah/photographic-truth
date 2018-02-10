@@ -18,6 +18,7 @@
 	};
 
 	@include respond-above(large){
+		margin:40vh auto 0 auto;
 		padding:0 5%;
 		
 	};

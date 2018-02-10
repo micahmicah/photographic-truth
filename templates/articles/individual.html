@@ -13,7 +13,7 @@
     {{item.story|safe}}
     {% for relation in item.contributor %}
     	<p class="article-byline">{{relation.name}}</p>
-    	<p class="article-byline--details">{{ item.last_updated|date('F d Y') }}</p>
+    	<p class="article-byline--details">{{ item.publish_date|date('F d Y') }}</p>
     {% endfor %}
     {% include "templates/partials/share-module.html" %}
   </section>
