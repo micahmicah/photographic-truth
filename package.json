@@ -41,7 +41,7 @@
     "node-neat": "^1.7.2",
     "nodejs-websocket": "~1.2.0",
     "proxy-middleware": "~0.5.0",
-    "request": "~2.31.0",
+    "request": "~2.88.0",
     "swig": "~1.4.1",
     "tiny-lr": "~0.1.0",
     "uslug": "~1.0.3",
