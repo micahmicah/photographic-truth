@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+h1, h2, p, ul li,
+ol li {
+  font-family: "itc franklin gothic std", arial narrow, arial, sans-serif;
+}
+
+body {
+  background: whitesmoke;
+}
+
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 72px;
+  }
+}
+
+a:visited {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+
+body {
+  max-width: 100%;
+  background: black;
+}
+
+p {
+  color: white;
+}
+
+.logo-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.logo-container svg {
+  max-width: 100vw;
+}
+@media screen and (min-width: 513px) {
+  .logo-container svg {
+    max-width: 60vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .logo-container svg {
+    max-width: 50vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .logo-container svg {
+    max-width: 40vw;
+  }
+}
+
+/*# sourceMappingURL=site.css.map */

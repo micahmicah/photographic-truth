@@ -1,0 +1,58 @@
+body{
+	background:$background-color;
+}
+
+h1{
+	@extend %sans-serif;
+	@include respond-above(medium){
+		font-size:72px;
+	};
+}
+
+h2{
+	@extend %sans-serif;
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+h5{
+
+}
+
+h6{
+
+}
+
+p{
+	@extend %sans-serif;
+}
+
+ul, 
+ol{
+	li{
+		@extend %sans-serif;	
+	}
+}
+
+
+
+a{
+	&:visited{
+		color:$text-color;	
+	}
+
+	&:hover{
+		color:$pop-color;
+	}
+
+}
+
+button{
+
+}
