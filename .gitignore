@@ -6,6 +6,8 @@ _site/
 .xml
 vendor
 
+_site/assets/main.css
+_site/feed.xml
 
 # Local Netlify folder
 .netlify
