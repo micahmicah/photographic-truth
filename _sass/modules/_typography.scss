@@ -1,0 +1,29 @@
+
+@font-face{
+	font-family:"Arnhem";
+	src:url('assets/fonts/ArnhemPro-Blond.otf');
+	font-style:normal;
+	font-weight:400;
+}
+@font-face{
+	font-family:"Arnhem";
+	src:url('assets/fonts/ArnhemPro-BlondItalic.otf');
+	font-style:italic;
+	font-weight:400;
+}
+
+
+@font-face{
+	font-family:"Monument Grotesk";
+	src:url('assets/fonts/MonumentGrotesk-Semi-Mono.otf');
+}
+
+@font-face{
+	font-family:"Oswald";
+	src:url('assets/fonts/Oswald-Bold.otf');
+}
+
+h2{
+	font-family:"Oswald";
+	font-weight:normal;
+}
