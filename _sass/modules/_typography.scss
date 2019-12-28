@@ -23,7 +23,34 @@
 	src:url('assets/fonts/Oswald-Bold.otf');
 }
 
+
+:root{
+	--serif:"Arnhem","times new roman", serif;
+	--condensed:"Oswald","impact",sans-serif;
+	--monument: "Monument Grotesk","courier",monospace;
+	--small: 14px;
+	--large: 56px;
+	--dark:rgb(20,20,20);
+	--mid:rgb(230,230,230);
+	--light:rgb(250,250,250);
+}
+
 h2{
 	font-family:"Oswald";
 	font-weight:normal;
+}
+
+h3{
+	font-family: var(--monument);
+	font-weight:normal;
+	font-size:var(--small);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+
+p{
+	font-family:"Arnhem";
+	font-size:24px;
+	color:var(--dark);
 }

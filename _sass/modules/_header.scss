@@ -1,0 +1,38 @@
+.site-title{
+	font-family:var(--condensed);
+	font-size:5vw;
+	text-transform:uppercase;
+	letter-spacing: -0.02em;
+	position: fixed;
+	right:20px;
+	top:20px;
+	margin: 0px;
+	color: var(--dark);
+	z-index: 10;
+	transition: color 1s ease-in-out;
+}
+
+
+.global-nav{
+	position: absolute;
+	padding-top:10vh;
+	width: 100%;
+	top:0;
+	transform:translateY(-120vh);
+	transition:/*transform 0.4s ease-in-out,*/
+			background 0.75s ease-in-out;
+	background:gray;
+	min-height:100vh;
+	z-index:5;
+}
+
+
+.global-nav.active{
+	transform:translateY(0vh);
+	position:fixed;
+	background:var(--dark);
+}
+
+.global-nav.active .nav-link{
+	filter:blur(0px);
+}
