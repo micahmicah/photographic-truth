@@ -9,3 +9,5 @@ vendor
 
 # Local Netlify folder
 .netlify
+_site/feed.xml
+_site/assets/main.css
