@@ -1,9 +1,27 @@
-@font-face { font-family: "Arnhem"; src: url("assets/fonts/ArnhemPro-Blond.otf"); font-style: normal; font-weight: 400; }
+@font-face { font-family: "Arnhem"; src: url("fonts/ArnhemPro-Blond.otf"); font-style: normal; font-weight: 400; }
 
-@font-face { font-family: "Arnhem"; src: url("assets/fonts/ArnhemPro-BlondItalic.otf"); font-style: italic; font-weight: 400; }
+@font-face { font-family: "Arnhem"; src: url("fonts/ArnhemPro-BlondItalic.otf"); font-style: italic; font-weight: 400; }
 
-@font-face { font-family: "Monument Grotesk"; src: url("assets/fonts/MonumentGrotesk-Semi-Mono.otf"); }
+@font-face { font-family: "Monument Grotesk"; src: url("fonts/MonumentGrotesk-Semi-Mono.otf"); }
 
-@font-face { font-family: "Oswald"; src: url("assets/fonts/Oswald-Bold.otf"); }
+@font-face { font-family: "Oswald"; src: url("fonts/Oswald-Bold.otf"); }
+
+:root { --serif:"Arnhem","times new roman", serif; --condensed:"Oswald","impact",sans-serif; --monument: "Monument Grotesk","courier",monospace; --small: 14px; --large: 56px; --dark:rgb(20,20,20); --mid:rgb(230,230,230); --light:rgb(250,250,250); }
 
 h2 { font-family: "Oswald"; font-weight: normal; }
+
+h3 { font-family: var(--monument); font-weight: normal; font-size: var(--small); text-transform: uppercase; letter-spacing: 0.04em; }
+
+code { font-family: var(--monument); }
+
+p { font-family: "Arnhem"; font-size: 24px; color: var(--dark); }
+
+.site-title { font-family: var(--condensed); font-size: 5vw; text-transform: uppercase; letter-spacing: -0.02em; position: fixed; right: 20px; top: 20px; margin: 0px; color: var(--dark); z-index: 10; transition: color 1s ease-in-out; }
+
+.global-nav { position: absolute; padding-top: 10vh; width: 100%; top: 0; transform: translateY(-120vh); transition: background 0.75s ease-in-out; background: gray; min-height: 100vh; z-index: 5; }
+
+.global-nav.active { transform: translateY(0vh); position: fixed; background: var(--dark); }
+
+.global-nav.active .nav-link { filter: blur(0px); }
+
+/*# sourceMappingURL=main.css.map */
