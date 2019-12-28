@@ -24,4 +24,76 @@ p { font-family: "Arnhem"; font-size: 24px; color: var(--dark); }
 
 .global-nav.active .nav-link { filter: blur(0px); }
 
+@font-face { font-family: "Arnhem"; src: url("fonts/ArnhemPro-Blond.otf"); font-style: normal; font-weight: 400; }
+
+@font-face { font-family: "Arnhem"; src: url("fonts/ArnhemPro-BlondItalic.otf"); font-style: italic; font-weight: 400; }
+
+@font-face { font-family: "Monument Grotesk"; src: url("fonts/MonumentGrotesk-Semi-Mono.otf"); }
+
+@font-face { font-family: "Oswald"; src: url("fonts/Oswald-Bold.otf"); }
+
+:root { --serif:"Arnhem","times new roman", serif; --condensed:"Oswald","impact",sans-serif; --monument: "Monument Grotesk","courier",monospace; --small: 14px; --large: 56px; --dark:rgb(20,20,20); --mid:rgb(230,230,230); --light:rgb(250,250,250); }
+
+body { background: gray; font-family: "Arnhem"; margin: 0; color: var(--dark); }
+
+p { font-family: "Arnhem"; font-size: 24px; color: var(--dark); }
+
+a { font-family: "Monument Grotesk"; }
+
+h3 { font-family: var(--monument); font-weight: normal; font-size: var(--small); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.site-title { font-family: var(--condensed); font-size: 5vw; text-transform: uppercase; letter-spacing: -0.02em; position: fixed; right: 20px; top: 20px; margin: 0px; color: var(--dark); z-index: 10; transition: color 1s ease-in-out; }
+
+.nav-trigger { font-family: var(--monument); font-size: var(--small); border: 1px solid black; background: none; text-transform: uppercase; padding: 0.75em 1.5em; letter-spacing: 0.04em; position: fixed; top: 20px; left: 20px; z-index: 10; }
+
+.nav-trigger.active { color: var(--light); border-color: var(--light); }
+
+.nav-link-list { list-style: none; padding: 0; }
+
+.nav-link { font-family: var(--serif); font-size: var(--large); text-decoration: none; color: var(--light); display: block; padding: 0.125em 0.25em; filter: blur(20px); transition: filter 0.3s ease-in-out 0.5s; }
+
+.nav-link-header { color: var(--light); }
+
+.nav-link:active { transform: scale(0.98); }
+
+.nav-link:hover { color: var(--dark); background: var(--light); }
+
+.invert { color: #373737; }
+
+.global-nav { position: absolute; padding-top: 10vh; width: 100%; top: 0; transform: translateY(-120vh); transition: background 0.75s ease-in-out; background: gray; min-height: 100vh; z-index: 5; }
+
+.global-nav.active { transform: translateY(0vh); position: fixed; background: var(--dark); }
+
+.global-nav.active .nav-link { filter: blur(0px); }
+
+.article-container { /*display:grid;*/ /*grid-template-columns: 1fr 1fr;*/ }
+
+.article-title { min-height: 100vh; font-size: var(--large); display: flex; font-weight: normal; align-items: center; letter-spacing: -0.03em; padding-left: 1.5rem; line-height: 0.9; margin: 0; }
+
+.article { border-left: 1px solid var(--dark); margin-left: 50vw; padding-bottom: 10vh; }
+
+.article p { margin: 0; padding: 0 1.5em; /*text-indent:3em;*/ }
+
+.article p + p { text-indent: 3em; }
+
+.image-gallery { position: fixed; width: 50%; align-items: center; display: flex; height: 100vh; z-index: 1; }
+
+.image-gallery figure { /*height:500px;*/ background: grey; display: block; /*border:1px solid black;*/ }
+
+.image-gallery figcaption { font-family: var(--monument); line-height: 1.33; font-size: var(--small); letter-spacing: 0.04em; }
+
+.article-number { font-family: var(--monument); display: block; font-size: var(--small); letter-spacing: 0.04em; }
+
+.index-link { display: block; transform: rotate(-90deg) translate(0vw, 44.5vw); position: fixed; font-size: var(--small); text-transform: uppercase; text-decoration: none; color: var(--dark); }
+
+.article-link { text-decoration: none; display: block; font-family: var(--serif); font-size: var(--large); color: var(--dark); }
+
+.article-link:hover { color: var(--light); background: var(--dark); }
+
+.image-gallery { position: fixed; width: 50%; align-items: center; display: flex; height: 100vh; z-index: 1; }
+
+.image-gallery figure { /*height:500px;*/ background: grey; display: block; /*border:1px solid black;*/ }
+
+.image-gallery figcaption { font-family: var(--monument); line-height: 1.33; font-size: var(--small); letter-spacing: 0.04em; }
+
 /*# sourceMappingURL=main.css.map */
