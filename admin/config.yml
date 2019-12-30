@@ -30,7 +30,13 @@ collections:
       - label: "Gallery"
         name: "galleryImages"
         widget: "list"
-        field: {label: Image, name: image, widget: image}
+        fields: 
+          - label: Item 
+            name: item 
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+              - {label: Caption, name: caption, widget: string}
 
       - label: "Testimonials"
         name: "testimonials"
