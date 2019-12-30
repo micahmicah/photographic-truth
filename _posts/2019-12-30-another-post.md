@@ -15,3 +15,5 @@ galleryImages:
       image: /assets/uploads/screen-shot-2019-11-06-at-11.30.17-am.png
 ---
 This is a sample post. Soon I will include a way to include feature images.
+
+I've included images in the CMS. Now I need to include them in the front matter I suppose?
