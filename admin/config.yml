@@ -24,5 +24,22 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: "Gallery", name: "galleryImages", widget: "list",fields: {label: 'Image', name: 'image', widget: 'image'}, {label: 'Caption', name: 'caption', widget: 'string'}}
+
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+      - label: "Gallery"
+        name: "galleryImages"
+        widget: "list"
+        field: {label: Image, name: image, widget: image}
+
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: "list"
+        fields:
+          - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+          - label: Author
+            name: author
+            widget: object
+            fields:
+              - {label: Name, name: name, widget: string, default: "Emmet"}
+              - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
