@@ -10,6 +10,7 @@ show_preview_links: true
 media_folder: 'assets/uploads'
 
 display_url: https://photographictruth.netlify.com/
+logo_url: https://photographictruth.netlify.com/assets/img/logo@2x.png
 
 collections:
   - name: 'blog'
