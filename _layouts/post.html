@@ -6,7 +6,7 @@ layout: default
 <section class="post article-container h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <section class="image-gallery">
       <a class="index-link" href="#">Image Index</a>
-      <figure>
+     <!--  <figure>
         <figcaption>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -15,7 +15,14 @@ layout: default
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </figcaption>
-      </figure>
+      </figure> -->
+
+      {% for item in page.galleryImages %}
+      <figure class="image-gallery-item">
+        <img class="gallery-image" src="{{item.item.image}}">
+        <figcaption class="gallery-caption">{{item.item.caption}}</figcaption>
+        </figure>
+      {% endfor %}
     </section>
 
   <article class="article">
